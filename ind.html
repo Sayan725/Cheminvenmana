@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemical Supplies</title>
+  <link rel="stylesheet" href="sty.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <h1>Chemical Supplies</h1>
+
+  <!-- Toolbar for actions -->
+  <div class="toolbar">
+    <button id="add-row" class="toolbar-btn"><i class="fas fa-plus"></i></button> <!-- Add Row -->
+    <button id="move-up" class="toolbar-btn"><i class="fas fa-arrow-up"></i></button> <!-- Move Up -->
+    <button id="move-down" class="toolbar-btn"><i class="fas fa-arrow-down"></i></button> <!-- Move Down -->
+    <button id="delete-row" class="toolbar-btn"><i class="fas fa-trash-alt"></i></button> <!-- Delete Row -->
+    <button id="refresh" class="toolbar-btn"><i class="fas fa-sync-alt"></i></button> <!-- Refresh -->
+    <button id="save" class="toolbar-btn"><i class="fas fa-save"></i></button> <!-- Save -->
+  </div>
+
+  <!-- Table structure -->
+  <table id="chemical-table">
+    <thead>
+      <tr>
+        <th data-column="id">ID</th>
+        <th data-column="chemicalName">Chemical Name</th>
+        <th data-column="vendor">Vendor</th>
+        <th data-column="density">Density (g/m³)</th>
+        <th data-column="viscosity">Viscosity (m²/s)</th>
+        <th data-column="packaging">Packaging</th>
+        <th data-column="packSize">Pack Size</th>
+        <th data-column="unit">Unit</th>
+        <th data-column="quantity">Quantity</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+   <!-- Modal for adding a new chemical -->
+   <div id="addModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Add New Chemical</h2>
+      <div class="form-input">
+        <label for="chemicalName">Chemical Name</label>
+        <input type="text" id="chemicalName" required>
+      </div>
+      <div class="form-input">
+        <label for="vendor">Vendor</label>
+        <input type="text" id="vendor" required>
+      </div>
+      <div class="form-input">
+        <label for="density">Density (g/m³)</label>
+        <input type="number" id="density" step="0.01" required>
+      </div>
+      <div class="form-input">
+        <label for="viscosity">Viscosity (m²/s)</label>
+        <input type="number" id="viscosity" step="0.01" required>
+      </div>
+      <div class="form-input">
+        <label for="packaging">Packaging</label>
+        <input type="text" id="packaging" required>
+      </div>
+      <div class="form-input">
+        <label for="packSize">Pack Size</label>
+        <input type="number" id="packSize" step="1" required>
+      </div>
+      <div class="form-input">
+        <label for="unit">Unit</label>
+        <input type="text" id="unit" required>
+      </div>
+      <div class="form-input">
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" step="0.01" required>
+      </div>
+      <button id="submit-new-row">Submit</button>
+    </div>
+  </div>
+  <script src="func.js">
+   
+  </script>
+
+</body>
+</html>
